@@ -1,0 +1,10 @@
+파이썬 기초,AI 전문가,False,5
+자바의 정석,김영한,True
+알고리즘 정복,홍길동,False,20
+C++ 프로그래밍,박지훈,False
+자바스크립트 마스터,이몽룡,True,10
+프로그래밍 패턴,강호동,False,15
+HTML5와 CSS3,서정은,True
+1,1,False
+2,2,False,2
+3,3,False
