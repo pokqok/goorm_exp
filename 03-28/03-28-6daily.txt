@@ -1,0 +1,36 @@
+🧩 문제 6. 비정규화 테이블 분석 (1NF 위반)
+다음과 같은 테이블 구조가 있다고 가정합시다:
+
+PlayLogBad(user_id, username, game_ids, total_play_time)
+
+예시 데이터:
+user_id username    game_ids    total_play_time
+1   alice   101,102,103 450
+2   bob 101,104 300
+
+문제:
+위 테이블은 어떤 정규화 원칙을 위반하고 있습니까?
+이 테이블을 **제1정규형(1NF)**으로 정규화하려면 어떤 식으로 나누어야 할까요?
+
+답:
+game_ids가 여러 값을 포함하고 있어 원자성을 위반합니다.
+userid와 username이 같이 있을 필요가 없습니다
+userid만 남기고 gameids는 분리하여 따로 저장합니다
+
+🧩 문제 7. 함수적 종속으로 인한 2NF 위반
+다음과 같은 테이블을 분석하세요:
+GameReviewBad(game_id, game_title, user_id, username, rating, comment)
+
+문제:
+이 테이블은 어떤 정규형을 위반하고 있습니까?
+이 테이블을 제2정규형(2NF) 혹은 제3정규형(3NF) 으로 정규화하려면 어떤 테이블로 나누어야 할까요?
+
+답:
+GameReviewBad 테이블은 2NF와 3NF를 모두 위반하고 있습니다.
+game_id, game_title 종속성
+username, user_id 종속성
+
+Game 테이블: (game_id, game_title)
+User 테이블: (user_id, username)
+Review 테이블: (game_id, user_id, rating, comment)
+로 나누어야 합니다
